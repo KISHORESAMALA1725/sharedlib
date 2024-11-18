@@ -8,12 +8,11 @@ pipleline {
         label 'java-slave'
     }
     environment {
-    APPLICATION_NAME = "${pipelineParams.appName}"
+        APPLICATION_NAME = "${pipelineParams.appName}"
     }
     stages {
         stage ('this is sharedlib stage') {
             steps {
-                echo "Building the project"
                 script {
                     mvn.buildApp("${pipelineParams.appName}")
 
