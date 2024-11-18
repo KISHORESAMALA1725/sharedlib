@@ -3,12 +3,12 @@ import com.i27academy.builds.mvn
 def call(Map pipelineParams) {
     mvn mvn = new mvn{}
 }
-environment {
-    APPLICATION_NAME = "${pipelineParams.appName}"
-}
 pipleline {
     agent {
         label 'java-slave'
+    }
+    environment {
+    APPLICATION_NAME = "${pipelineParams.appName}"
     }
     stages {
         stage ('this is sharedlib stage') {
