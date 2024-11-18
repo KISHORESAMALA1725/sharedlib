@@ -2,7 +2,7 @@ package com.i27academy.builds
 
 class mvn {
     def jenkins
-    mvn (jenkins) {
+    mvn(jenkins) {
         this.jenkins = jenkins
     }
 
